@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    margin-bottom: 2rem;
     
 }
 
@@ -62,30 +63,87 @@
     border: none;
     color: #ffffff;
     background-color: #471C8F;
+    cursor: pointer;
 }
 
 .btnsubmit:hover{
 background-color: #5751b3;
 }
 
+.socialicons{
+    width: 100%;
+}
+/* new styling */
+.formbody{
+    margin-top: 4rem;
+}
+
+.heroimg{
+    display: block;
+}
+
+.btnsection{
+    width: 100%;
+    margin: 1rem 0;
+}
+
+
+/* ends here */
+.formcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+
+.socials{
+    width: 70%;
+    margin: auto;
+}
+
+.noaccount{
+    width: 70%;
+    margin-top: 2rem;
+    padding-left: 7rem;
+}
+
+@media only screen and (max-width:700px) {
+    .heroimg{
+        display: none;
+    }  
+    .formbody{
+        margin-top: 30%;   
+    }
+
+    .noaccount{
+        padding-left: 3.6rem;
+        width: 100%;
+    }
+}
+
 .socialbox{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     height: 30px;
-    width: 100px;
+    width: 130px;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
 }
+
+
+
 .fcbkbox{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     height: 30px;
-    width: 100px;
-    margin: 0 0.75rem;
+    width: 130px;
+    margin: 0 2rem;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
 }
