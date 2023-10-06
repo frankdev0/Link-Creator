@@ -1,0 +1,102 @@
+/* Style the table container */
+.tableContainer {
+    overflow-x: auto; 
+    width: 100%;
+    height: 570px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+.tableContainertwo {
+    overflow-x: auto; 
+    width: 100%;
+    height: 370px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .tablebody{
+    padding-left: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .sidebarwidth{
+    width: 22%;
+  }
+
+  .contentwidth{
+    width: 78%;
+  }
+
+  .innerbody{
+    /* height: 100vh; */
+    width: 100%;
+    /* overflow-y: scroll;
+    overflow-x: scroll; */
+  }
+
+  .recentadd{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+  
+  /* Style the table */
+  .customTable {
+    width: 100%; /* Occupy the full width of its container */
+    border-collapse: collapse; /* Merge table borders */
+  
+  }
+  
+  .customTable thead {
+    background-color: #F5F5F5; 
+    position: sticky; 
+    top: 0; 
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  /* Style table header cells */
+  .customTable th {
+    padding: 20px; /* Add padding to header cells */
+  }
+  
+  
+  /* Style table cells */
+  .customTable td {
+    padding: 10px 20px; /* Add padding to cells */
+  }
+  
+  /* Style odd and even rows */
+  .customTable .oddrow {
+    background-color: #F5F5F5;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .customTable .evenrow {
+    background-color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .btnsubmit{
+    width: 100%;
+    height: 32px;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    background-color: #471C8F;
+    cursor: pointer;
+}

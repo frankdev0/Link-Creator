@@ -12,9 +12,6 @@ export default function Sidebar() {
   return (
     <div>
       <div className={styles.siderbarcontainer}>
-        <div className={styles.sidebarlogo}>
-          <Image src="/logo.png" width={50} height={50} alt="logo" />
-        </div>
         <div>
           <ul className={styles.lists}>
             <li className={styles.listitems}>
@@ -25,7 +22,7 @@ export default function Sidebar() {
                 
                 <div className={styles.iconmenu}>
                 <PiBookOpenTextThin/>
-                <Link href="/site" className={styles.menulinks}>Site</Link>
+                <Link href="/allsites" className={styles.menulinks}>Site</Link>
                 </div>
                 
               <div className={styles.dropdown}><IoIosArrowDown/></div>
