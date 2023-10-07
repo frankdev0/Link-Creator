@@ -1,13 +1,15 @@
 import Image from "next/image";
 import styles from "@/styles/Signin.module.css";
 import Link from "next/link";
-import { HiOutlineLockClosed, HiOutlineLockOpen, HiAtSymbol } from 'react-icons/hi';
+import {
+  HiOutlineLockClosed,
+  HiOutlineLockOpen,
+  HiAtSymbol,
+} from "react-icons/hi";
 import { useState } from "react";
 
-
 export default function Login() {
-
-    const [passwordVisible, setPasswordVisible] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
     <div>
@@ -18,45 +20,51 @@ export default function Login() {
               <Image src="/logo.png" width={50} height={50} alt="logo" />
             </div>
             <div>
-            <form className={styles.formcontent}>
-  <div className={styles.inputContainer}>
-    <label htmlFor="email" className={styles.labels}>Email:</label>
-    <div className={styles.passwordInputContainer}>
-    <input
-      type='text'
-      placeholder="youremail@example.com"
-      name="password"
-      className={`${styles.passwordinput} form-contol`}
-    />
-    <div className={styles.passwordIconContainer} >
-       <HiAtSymbol />
-    </div>
-  </div>
-  </div>
-  <div className={styles.inputContainer}>
-  <label htmlFor="password" className={styles.labels}>
-    Password:
-  </label>
-  <div className={styles.passwordInputContainer}>
-    <input
-      type={passwordVisible ? 'text' : 'password'}
-      placeholder="********"
-      name="password"
-      className={`${styles.passwordinput} form-contol`}
-    />
-    <div className={styles.passwordIconContainer} onClick={() => setPasswordVisible(!passwordVisible)}>
-      {passwordVisible ? <HiOutlineLockOpen /> : <HiOutlineLockClosed/>} 
-    </div>
-  </div>
-</div>
+              <form className={styles.formcontent}>
+                <div className={styles.inputContainer}>
+                  <label htmlFor="email" className={styles.labels}>
+                    Email:
+                  </label>
+                  <div className={styles.passwordInputContainer}>
+                    <input
+                      type="text"
+                      placeholder="youremail@example.com"
+                      name="password"
+                      className={`${styles.passwordinput} form-contol`}
+                    />
+                    <div className={styles.passwordIconContainer}>
+                      <HiAtSymbol />
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.inputContainer}>
+                  <label htmlFor="password" className={styles.labels}>
+                    Password:
+                  </label>
+                  <div className={styles.passwordInputContainer}>
+                    <input
+                      type={passwordVisible ? "text" : "password"}
+                      placeholder="********"
+                      name="password"
+                      className={`${styles.passwordinput} form-contol`}
+                    />
+                    <div
+                      className={styles.passwordIconContainer}
+                      onClick={() => setPasswordVisible(!passwordVisible)}
+                    >
+                      {passwordVisible ? (
+                        <HiOutlineLockOpen />
+                      ) : (
+                        <HiOutlineLockClosed />
+                      )}
+                    </div>
+                  </div>
+                </div>
 
-
-
-  <div className={styles.btnsection}>
-    <button className={styles.btnsubmit}>Login</button>
-  </div>
-</form>
-
+                <div className={styles.btnsection}>
+                  <button className={styles.btnsubmit}>Login</button>
+                </div>
+              </form>
             </div>
             <div className={styles.socialicons}>
               <div className={styles.socials}>
@@ -94,28 +102,33 @@ export default function Login() {
             </div>
             <div className={styles.noaccount}>
               <span>
-                Dont have an account? Sign Up <Link href="/signin" className={styles.linkto}>Here</Link>
+                Dont have an account? Sign Up{" "}
+                <Link href="/signin" className={styles.linkto}>
+                  Here
+                </Link>
               </span>
             </div>
           </div>
           {/* HERO IMAGE */}
           <div className={`${styles.heroimg} col-12 col-md-6`}>
-  <div className={styles.heroImageContainer}>
-    <Image
-      src="/heroimage.png"
-      width={300}
-      height={300}
-      alt="heroimage"
-      className={styles.heroimage}
-      priority
-    />
-    <div className={styles.overlayText}>
-        <h3>Welcome Back</h3>
-      <p>An AI advanced software that automatically assists website owners and users to promote their articles and site content.</p>
-    </div>
-  </div>
-</div>
-
+            <div className={styles.heroImageContainer}>
+              <Image
+                src="/heroimage.png"
+                width={300}
+                height={300}
+                alt="heroimage"
+                className={styles.heroimage}
+                priority
+              />
+              <div className={styles.overlayText}>
+                <h3>Welcome Back</h3>
+                <p>
+                  An AI advanced software that automatically assists website
+                  owners and users to promote their articles and site content.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

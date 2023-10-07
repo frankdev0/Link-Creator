@@ -1,23 +1,24 @@
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Newsite.module.css'
 
 
+export default function Addnew () {
+    return (
 <div>
+      <Navbar />
 
-<Navbar/>
-    
-      
-    <div className='d-flex'>
-      <div className={styles.sidebarcntainer}><Sidebar/></div>
-      <div className={styles.innerbody}>
+      <div className="d-flex">
+        <div className={styles.sidebarwidth}>
+          <Sidebar />
         </div>
-        </div>
-     {/* <div className='d-flex px-4 py-4'>
-        <div className={`${styles.tablebody} row`}>
-          <div className='col-12'>
-            <Table/>
-          </div>
-        </div>
-      </div> */}
-    </div>
+        <div className={styles.contentwidth}>
+        <div className={styles.innerbody}>
+        
+      <div className='d-flex px-4 py-4'></div>
+      </div>
+      </div>
+      </div>
+      </div>
+    )
+}
