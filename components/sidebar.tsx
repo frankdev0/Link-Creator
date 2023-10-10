@@ -40,7 +40,7 @@ export default function Sidebar() {
                 
                 <div className={styles.iconmenu}>
                 <IoSettingsOutline/>
-                <Link href="/site" className={styles.menulinks}>Settings</Link>
+                <Link href="/profile" className={styles.menulinks}>Settings</Link>
                 </div>
                 
               <div className={styles.dropdown}><IoIosArrowDown/></div>

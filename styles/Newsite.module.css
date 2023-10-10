@@ -197,11 +197,16 @@
   }
 
   .profilelabel{
-    font-size: 16px;
+    font-size: 0.75rem;
     font-weight: 700;
     color: #471C8F;
     text-align: left;
     /* margin-top: 1rem; */
+  }
+
+  .lables{
+    font-size: 0.75rem !important;
+    font-weight: 400;
   }
 
   .profiledesc{
@@ -209,6 +214,7 @@
     font-weight: 700;
     color: #878686;
     text-align: right;
+    font-size: 0.75rem;
     /* margin-top: 1rem; */
   }
 
@@ -237,16 +243,27 @@
     font-size: 15px;
   }
 
-  .account{
+  .profilebtn{
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .account {
     font-size: 14px;
     font-weight: 700;
-    color: #471C8F;
+    color: #471c8f;
     margin-right: 1rem;
+    cursor: pointer;
+    transition: border-bottom 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  .account.activeTab {
+    border-bottom: 3px solid #471c8f; /* Style for the active tab */
   }
 
   .profileinputs {
     display: block;
-    width: 257px;
+    width: 220px;
      /* outline: none;  */
      border: 1px solid #ccc;
     padding: 0.5rem;
@@ -260,3 +277,61 @@
     border-radius: 10px;
     margin-right: 10px;
   }
+
+  .profileinputs::placeholder{
+    font-size: 0.75rem;
+  }
+
+  .planborder{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /* width: 100%; */
+    height: 100%;
+    /* padding: 1rem 0; */
+  }
+
+  /* .profileheader{
+    position: relative;
+    bottom:0;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+  } */
+
+  .itemize{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .profilepicborder{
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  .profilesettings{
+    display: flex;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid #ccc;
+    /* width: 100%; */
+  }
+
+  .formcontainer{
+    padding: 1rem 1.5rem;
+  }
+
+ 
+.btnborder {
+  border-top: 1px solid #ccc;
+  width: calc(100% + 2.9rem); 
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.labels{
+  font-size: 0.75rem;
+}
