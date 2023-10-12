@@ -23,11 +23,15 @@
 
   .containerborder{
     border: 1px solid #ccc;
-    height: 98vh;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     width: 100%;
     margin-top: 1rem;
     margin-right: 1rem;
     border-radius: 10px;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 
   .addsite{
@@ -63,6 +67,13 @@
     font-size: 30px;
     color: #000;
   }
+  .selectplugin{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+  }
   
   .iconContainer {
     position: relative;   
@@ -88,7 +99,7 @@
   .btnyes{
     margin-top: 2rem;
     width: 250px;
-    height: 35px;
+    height: 40px;
     font-size: 15px;
     border-radius: 5px;
     border: none;
@@ -128,6 +139,7 @@
 
   .inputs::placeholder {
     color: #6A47A4; 
+    font-size: 0.75rem;
   }
 
   .submitcontainer{
@@ -136,6 +148,7 @@
     border: 1px solid #4208a7;
     border-radius: 10px;
     padding: 0.3rem 1.5rem;
+    font-size: 0.75rem;
   }
 
   .submitbox{
@@ -169,12 +182,10 @@
   .webbox{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 1rem;
   }
 
- 
-  
   .webtexts{
     display: flex;
     /* gap: 5px; */
@@ -184,12 +195,18 @@
     padding: 0.3rem;
   }
 
+  .textwrapper{
+    margin-left: -40px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
   .profilepic{
     border-radius: 50%;
   }
 
   .profilename{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #471C8F;
     text-align: center;
@@ -323,6 +340,109 @@
   .formcontainer{
     padding: 1rem 1.5rem;
   }
+  .billingcontainer{
+    width: 100%;
+    /* padding: 1rem 4.3rem; */
+  }
+
+ .billingdesc{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 530px;
+  padding: 0.5rem 1rem;
+ }
+
+ .billingborder{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 530px;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+ }
+
+ .bottomborder{
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  align-items: center;
+ }
+
+ .bottomitems{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 480px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-top: 0.5rem;
+ }
+
+ .help{
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #878686;
+ }
+ .nohelp{
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #471C8F;
+ }
+ .addcard{
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #471C8F;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+ }
+
+ .billingempty{
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+}
+
+.paymentborder{
+  border-right: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+  height: 70px;
+}
+ .card{
+  width: 520px;
+ }
+
+ .sub{
+  padding-left: 2rem;
+ }
+
+ .paymentdetails{
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+ }
+
+ @media screen and (max-width:900px) {
+  .billingdesc {
+    width: 100%; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+}
+
+.billingheaders{
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.billingvalue{
+  font-size: 0.85rem;
+  font-weight: 400;
+}
 
  
 .btnborder {
@@ -334,4 +454,55 @@
 
 .labels{
   font-size: 0.75rem;
+}
+
+.progressbar{
+  padding: 0.5rem;
+  content: '';
+  width: 10px; 
+  height: 10px;  
+  border-radius: 50%;
+  background-color: #471C8F;
+}
+
+.progress{
+  border: 1px solid #471C8F;
+  width: 220px;
+  height: 0.5px;
+}
+
+.steps{
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.step{
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.modaltexts{
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-align: center;
+}
+.modalsubtext{
+  font-size: 0.85rem;
+  width: 300px;
+  font-weight: 400;
+  padding-top: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.plans{
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #878686;
+
 }

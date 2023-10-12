@@ -69,7 +69,7 @@ export default function Profile() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-12 col-md-8 d-flex justify-content-center">
+                  <div className="col-12 col-md-8 col-lg-8 d-flex justify-content-center">
                     <div className={styles.planborder}>
                       <div>
                         {/* <div className={styles.profilesettings}>
@@ -100,7 +100,7 @@ export default function Profile() {
         <div>Account Settings Content</div>
       )}
       {activeTab === 'billing' && <div>Billing Content</div>} */}
-
+{activeTab === 'accountSettings' && (
                         <div>
                           <form className={styles.formcontainer}>
                             <div className=" row d-flex mt-3">
@@ -230,6 +230,98 @@ export default function Profile() {
                             </div>
                           </form>
                         </div>
+                        )}
+                        {/* Billing Information */}
+                        {activeTab === 'billing' &&
+                        <div className={styles.billingcontainer}>
+                    <div className={styles.negativepadding}>
+                            <div className={styles.billingdesc}>
+                            <div>
+                            <p className={styles.plans}>Your Plan</p>
+                            <h3 className={styles.profilename}>Basic Plan</h3>
+                            </div>
+                            <button className={styles.btncontinue}>Upgrade Plan</button>
+                            </div>
+                            <div className={styles.billingdesc}>
+                              <p className={styles.billingheaders}>Website(s)</p>
+                              <p className={styles.billingvalue}>1</p>
+                            </div>
+                            <div className={styles.billingdesc}>
+                              <p className={styles.billingheaders}>Pages(s)</p>
+                              <p className={styles.billingvalue}>10</p>
+                            </div>
+                            <div className={styles.billingdesc}>
+                              <p className={styles.billingheaders}>Duration</p>
+                              <p className={styles.billingvalue}>∞</p>
+                            </div>
+                            <div className={styles.billingborder}>
+                              <p className={styles.billingheaders}>Price</p>
+                              <p className={styles.billingvalue}>Free</p>
+                            </div>
+                            <div className={styles.paymentdetails}>
+                            {/* <div className={`${styles.card} row`}>
+                            <div className={`${styles.paymentborder} col-12 col-lg-6`}>
+                              <p className={styles.help}>Payment Details</p>
+                              <p className={styles.addcard}> ➕ Add card</p>
+                            </div>
+                            <div className={`${styles.sub} col-12 col-lg-6`}>
+                              <p className={styles.help}>Subscription History</p>
+                              <p className={styles.billingempty}>😭 History is empty</p>
+                            </div>
+                            </div> */}
+                            <div className="row">
+                              <div className="col-12 col-lg-6">
+                                <div className="d-flex">
+                                <p>Payment Details</p>
+                                <p>Edit</p>
+                                </div>
+                                <div>
+                                  <Image src='/mastercard.png' alt="mastercard" width={50} height={50} />
+                                  <div>
+                                    <p>****  ****  ****  9806</p>
+                                    <p>Mastercard - Expires 09/2025</p>
+                                  </div>
+                                </div>
+                                <div>Your billing cycle will occur on the 20th of
+                                      each month.
+                                      Your next billing is 20th, November 2023</div>
+                              </div>
+                              <div className="col-12 col-lg-6">
+                                <div className="d-flex">
+                                  <p>Subscription History</p>
+                                  <p>View all</p>
+                                </div>
+                                <div className="d-flex">
+                                  <p>20th October</p>
+                                  <p>$1</p>
+                                </div>
+                                <div className="d-flex">
+                                  <p>20th September</p>
+                                  <p>$1</p>
+                                </div>
+                                <div className="d-flex">
+                                  <p>13th August</p>
+                                  <p>$1</p>
+                                </div>
+                                <div className="d-flex">
+                                  <p>13th August</p>
+                                  <p>$10</p>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                            <div className={styles.bottomborder}>
+                          <div className={styles.bottomitems}>
+                            <p className={styles.help}>Need more website or page slot?</p>
+                            <p className={styles.nohelp}>Customize Plan</p>
+                          </div>
+                          </div>
+                            <div>
+
+                            </div>
+                          </div>
+                        </div>
+                          }
                       </div>
                     </div>
                   </div>

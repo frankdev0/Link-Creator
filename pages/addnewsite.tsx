@@ -5,10 +5,21 @@ import styles from "@/styles/Newsite.module.css";
 import Image from "next/image";
 import { GrStatusGood } from "react-icons/gr";
 import { BsArrowRightCircle } from "react-icons/bs";
+import CustomModal from "@/components/modal";
+
+
 
 export default function Addnew() {
   const [addNew, setAddNew] = useState(false);
   const [addWeb, setAddWeb] = useState(false);
+  const [confirmWeb, setConfirmWeb] = useState(false);
+  const [steps, setSteps] = useState({
+    stepOne: false,
+    stepTwo: false,
+    stepThree: false,
+    stepFour: false,
+  })
+  
 
   return (
     <div>
@@ -87,7 +98,7 @@ export default function Addnew() {
                 </div>
               </div>
               }
-              {addWeb === true && 
+              {addWeb === true && confirmWeb === false &&
                 <div className={`${styles.thirdsection} row`}>
                 <div className={`${styles.alignment} col-12`}>
                   <h3 className={styles.selectweb}>
@@ -130,6 +141,9 @@ export default function Addnew() {
                     </div>
                     <button
                       className={styles.btnyes}
+                      onClick={() => {
+                        setConfirmWeb(!confirmWeb);
+                      }}
                     >
                       Yes, this is my website
                     </button>
@@ -137,6 +151,212 @@ export default function Addnew() {
                 </div>
               </div>
               }
+               {confirmWeb === true && steps.stepOne === false &&
+                <div className={`${styles.thirdsection} row`}>
+                  <div className="pt-4"></div>
+                  <div className={`${styles.progressbar}`}></div>
+                  <div className={styles.progress}></div>
+                  <div className={styles.progressbar}></div>
+                  <div className={styles.progress}></div>
+                  
+                <div className={`${styles.alignment} col-12 pt-5`}>
+                  <h3 className={styles.selectplugin}>
+                  👍 Well-done, You are almost there.
+                  </h3>
+                  <div className="d-flex justify-content-center">
+                    <div className={styles.submitboxx}>
+                      <div className={styles.submitcontainer}>
+                        <input className={styles.inputs} placeholder="www.example.com"/>
+                        <span>copy</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className={`${styles.webbox} row`}>
+                      <div className="col-12 d-flex justify-content-center  ">
+                        <div>
+                        <div className={styles.textwrapper}>
+                        <div className={styles.steps}>Step 1:</div>
+                        <div className={styles.step}>Login to your wordpressss dashboard</div>
+                        </div>
+                       
+                        <Image src='/stepone.png' alt="linkcreator steps" width={500} height={250} /> 
+                       
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      className={styles.btnyes}
+                      onClick={() => {
+                        setSteps((prevState) => ({
+                          ...prevState,
+                          stepOne: !prevState.stepOne,
+                        }));
+                      }}
+                    >
+                      Next Step
+                    </button>
+                  </div>
+                </div>
+              </div>
+              }
+              { steps.stepOne === true && steps.stepTwo === false &&
+                <div className={`${styles.thirdsection} row`}>
+                  <div className="pt-4"></div>
+                  <div className={`${styles.progressbar}`}></div>
+                  <div className={styles.progress}></div>
+                  <div className={styles.progressbar}></div>
+                  <div className={styles.progress}></div>
+                  
+                <div className={`${styles.alignment} col-12 pt-5`}>
+                  <h3 className={styles.selectplugin}>
+                  👍 Well-done, You are almost there.
+                  </h3>
+                  <div className="d-flex justify-content-center">
+                    <div className={styles.submitboxx}>
+                      <div className={styles.submitcontainer}>
+                        <input className={styles.inputs} placeholder="www.example.com"/>
+                        <span>copy</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className={`${styles.webbox} row`}>
+                      <div className="col-12 d-flex justify-content-center  ">
+                        <div>
+                        <div className={styles.textwrapper}>
+                        <div className={styles.steps}>Step 2:</div>
+                        <div className={styles.step}>Now search for our plugin (LinkCreatorAI), install and activate it.</div>
+                        </div>
+                       
+                        <Image src='/steptwo.png' alt="linkcreator steps" width={500} height={250} /> 
+                       
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      className={styles.btnyes}
+                      onClick={() => {
+                        setSteps((prevState) => ({
+                          ...prevState,
+                          stepTwo: !prevState.stepTwo,
+                        }));
+                      }}
+                    >
+                      Next Steps
+                    </button>
+                  </div>
+                </div>
+              </div>
+              }
+               { steps.stepTwo === true && steps.stepThree === false &&
+                <div className={`${styles.thirdsection} row`}>
+                  <div className="pt-4"></div>
+                  <div className={`${styles.progressbar}`}></div>
+                  <div className={styles.progress}></div>
+                  <div className={styles.progressbar}></div>
+                  <div className={styles.progress}></div>
+                  
+                <div className={`${styles.alignment} col-12 pt-5`}>
+                  <h3 className={styles.selectplugin}>
+                  👍 Well-done, You are almost there.
+                  </h3>
+                  <div className="d-flex justify-content-center">
+                    <div className={styles.submitboxx}>
+                      <div className={styles.submitcontainer}>
+                        <input className={styles.inputs} placeholder="www.example.com"/>
+                        <span>copy</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className={`${styles.webbox} row`}>
+                      <div className="col-12 d-flex justify-content-center  ">
+                        <div>
+                        <div className={styles.textwrapper}>
+                        <div className={styles.steps}>Step 3:</div>
+                        <div className={styles.step}>Kindly open the plugin and login with your LinkCreatorAI credentials.</div>
+                        </div>
+                       
+                        <Image src='/stepthree.png' alt="linkcreator steps" width={500} height={250} /> 
+                       
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      className={styles.btnyes}
+                      onClick={() => {
+                        setSteps((prevState) => ({
+                          ...prevState,
+                          stepThree: !prevState.stepThree,
+                        }));
+                      }}
+                    >
+                      Next Steps
+                    </button>
+                  </div>
+                </div>
+              </div>
+              }
+               { steps.stepThree === true && steps.stepFour === false &&
+                <div className={`${styles.thirdsection} row`}>
+                  <div className="pt-4"></div>
+                  <div className={`${styles.progressbar}`}></div>
+                  <div className={styles.progress}></div>
+                  <div className={styles.progressbar}></div>
+                  <div className={styles.progress}></div>
+                  
+                <div className={`${styles.alignment} col-12 pt-5`}>
+                  <h3 className={styles.selectplugin}>
+                  👍 Well-done, You are almost there.
+                  </h3>
+                  <div className="d-flex justify-content-center">
+                    <div className={styles.submitboxx}>
+                      <div className={styles.submitcontainer}>
+                        <input className={styles.inputs} placeholder="www.example.com"/>
+                        <span>copy</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className={`${styles.webbox} row`}>
+                      <div className="col-12 d-flex justify-content-center  ">
+                        <div>
+                        <div className={styles.textwrapper}>
+                        <div className={styles.steps}>Step 3:</div>
+                        <div className={styles.step}>Lastly kindly copy your API KEY above and paste in the API KEY field in the plugin. then click “Confirm”</div>
+                        </div>
+                       
+                        <Image src='/stepthree.png' alt="linkcreator steps" width={500} height={250} /> 
+                       
+                        </div>
+                      </div>
+                    </div>
+                    {/* <button
+                      className={styles.btnyes}
+                      type="button" data-toggle="modal" data-target="#exampleModalCenter"
+                      
+                    >
+                      Finish
+                    </button> */}
+                    <div>
+      {/* <Button variant="primary" onClick={handleShow}>
+        Finish
+      </Button> */}
+        {/* <Button variant="primary" onClick={handleShow}>
+        Finish
+      </Button> */}
+      <CustomModal />
+    </div>
+                  </div>
+                </div>
+              </div>
+              }
+              
             </div>
           </div>
         </div>
