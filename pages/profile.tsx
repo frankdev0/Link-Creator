@@ -269,48 +269,51 @@ export default function Profile() {
                               <p className={styles.billingempty}>😭 History is empty</p>
                             </div>
                             </div> */}
-                            <div className="row">
-                              <div className="col-12 col-lg-6">
-                                <div className="d-flex">
-                                <p>Payment Details</p>
-                                <p>Edit</p>
+                            <div className="row px-3 pb-3">
+                              <div className={`${styles.paymentborder} col-12 col-lg-6`}>
+                                <div className="d-flex justify-content-between">
+                                <p className={styles.help}>Payment Details</p>
+                                <p className={styles.cardinfo}>Edit</p>
                                 </div>
-                                <div>
-                                  <Image src='/mastercard.png' alt="mastercard" width={50} height={50} />
-                                  <div>
-                                    <p>****  ****  ****  9806</p>
-                                    <p>Mastercard - Expires 09/2025</p>
+                                <div className="d-flex mb-5">
+                                  <Image src='/mastercard.png' alt="mastercard" width={30} height={30} />
+                                  <div className={styles.carddetails}>
+                                    <div>
+                                    <div>****  ****  ****  9806</div>
+                                    <div>Mastercard - Expires 09/2025</div>
+                                    </div>
+                                    
                                   </div>
                                 </div>
-                                <div>Your billing cycle will occur on the 20th of
+                                <div className={styles.billingcycle}>Your billing cycle will occur on the 20th of
                                       each month.
-                                      Your next billing is 20th, November 2023</div>
+                                      Your next billing is <span className={styles.cycledate}>20th, November 2023</span></div>
                               </div>
                               <div className="col-12 col-lg-6">
-                                <div className="d-flex">
-                                  <p>Subscription History</p>
-                                  <p>View all</p>
+                                <div className="d-flex justify-content-between">
+                                  <p className={styles.help}>Subscription History</p>
+                                  <p className={styles.cardinfo}>View all</p>
                                 </div>
-                                <div className="d-flex">
-                                  <p>20th October</p>
-                                  <p>$1</p>
+                                <div className="d-flex justify-content-between">
+                                  <p className={styles.carddetails}>20th October</p>
+                                  <p className={styles.carddetails}>$1</p>
                                 </div>
-                                <div className="d-flex">
-                                  <p>20th September</p>
-                                  <p>$1</p>
+                                <div className="d-flex justify-content-between">
+                                  <p className={styles.carddetails}>20th September</p>
+                                  <p className={styles.carddetails}>$1</p>
                                 </div>
-                                <div className="d-flex">
-                                  <p>13th August</p>
-                                  <p>$1</p>
+                                <div className="d-flex justify-content-between">
+                                  <p className={styles.carddetails}>13th August</p>
+                                  <p className={styles.carddetails}>$1</p>
                                 </div>
-                                <div className="d-flex">
-                                  <p>13th August</p>
-                                  <p>$10</p>
+                                <div className="d-flex justify-content-between">
+                                  <p className={styles.carddetails}>13th August</p>
+                                  <p className={styles.carddetails}>$10</p>
                                 </div>
                               </div>
                             </div>
                             </div>
-                            <div className={styles.bottomborder}>
+                            <div className={`${styles.bottomborder} pb-4`}>
                           <div className={styles.bottomitems}>
                             <p className={styles.help}>Need more website or page slot?</p>
                             <p className={styles.nohelp}>Customize Plan</p>
