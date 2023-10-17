@@ -8,8 +8,8 @@
 .innerbody{
   height: 100vh;
   width: 100%;
-  overflow-y: scroll;
-  overflow-x: scroll;
+  /* overflow-y: scroll; */
+  /* overflow-x: scroll; */
 }
 
 .navarea{
@@ -173,36 +173,35 @@
     padding: 20px; 
   }
 
-.boxes{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    border: 1px solid #ccc;
-    height: 121px;
-    border-radius: 10px;
-    width: 270px;
-    gap: 10px;
- 
-}
-
 .boxicon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 25px;
   color: #471C8F;
   padding: 2px 4px;
   border-radius: 5px;
+  margin-right: 1.5rem;
 }
 .linkicon{
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #471C8F;
   color: #ffffff;
   padding: 2px 4px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
+  margin-right: 1.5rem;
 }
 
 .stats{
   color: #929292;
   font-weight: 700;
   font-size: 16px;
+  padding: 0;
+  margin: 0;
 }
 
 .statsnumber{
@@ -217,13 +216,60 @@
   color: #000000;
 }
 
-.mainbox{
-  padding-left: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+.boxcontainer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 30px; /* Adjust the gap as needed */
+  padding: 0 2rem;
 }
+
+.icons{
+  font-size: 1rem;
+}
+
+.linklabel{
+  display: flex;
+font-size: 0.88rem;
+font-weight: 600;
+}
+
+.eachbox{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  border: 1px solid #ccc;
+  height: 121px;
+  border-radius: 10px;
+}
+
+
+.bxes {
+  display: flex; 
+  flex-direction: row; 
+  width: 100%;
+  padding: 2rem;
+}
+
+.chartcontainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  padding: 0 2rem;
+}
+
+.chartone {
+  grid-column: span 3;
+}
+.charttwo {
+  grid-column: span 2;
+}
+.chartthree {
+  grid-column: span 2;
+}
+
 
 .tablebody{
   padding-left: 2rem;
@@ -238,4 +284,80 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   height: 370px;
+}
+
+/* New CSS Styling starts from here for the container page */
+
+.container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  /* gap: 1.8rem; */
+  grid-template-columns: 14rem auto;
+}
+
+.contentbody{
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  overflow-y: scroll;
+}
+
+@media  screen and (max-width: 1200px) {
+
+  .container{
+      grid-template-columns: 7rem auto;
+  }
+
+
+  .boxcontainer {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .chartcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 2rem;
+  }
+  
+  .chartone {
+    grid-column: span 1;
+  }
+  .charttwo {
+    grid-column: span 1;
+  }
+  .chartthree {
+    grid-column: span 1;
+  }
+
+
+}
+
+@media  screen and (max-width: 768px) {
+
+  .container{
+      width: 100%;
+      grid-template-columns: auto;
+  }
+
+  .contentbody{
+    position: relative;
+    left: 0;
+    margin-top: 6rem;
+    width: 55%;
+}
+.boxcontainer {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px; 
+  text-align: center;
+}
+
+.chartcontainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 0 2rem;
+}
+
 }

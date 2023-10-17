@@ -5,7 +5,7 @@ import styles from "@/styles/Mydashboard.module.css";
 
 
 
-export default function Samplenew () {
+export default function Addnew () {
     return (
 <div className={styles.container}>
    <Newside/>

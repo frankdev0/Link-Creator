@@ -1,6 +1,6 @@
-import Navbar from "@/components/navbar";
+import Mainnav from "@/global/mainnavbar";
+import Newside from "@/global/mainsidebar";
 import { useState } from "react";
-import Sidebar from "@/components/sidebar";
 import styles from "@/styles/Newsite.module.css";
 import Image from "next/image";
 import { GrStatusGood } from "react-icons/gr";
@@ -22,15 +22,12 @@ export default function Addnew() {
   
 
   return (
-    <div>
-      <Navbar />
-
-      <div className="d-flex">
-        <div className={styles.sidebarwidth}>
-          <Sidebar />
-        </div>
-        <div className={styles.contentwidth}>
-          <div className={styles.innerbody}>
+    <div className={styles.container}>
+       <Newside/>
+       <div>
+        <Mainnav/>
+       <div className={`${styles.contentbody} px-4 d-flex justify-content-center`}>
+       <div className={styles.innerbody}>
             <div className={styles.containerborder}>
               { addNew === false && <div className={`${styles.addsite} row`}>
                 <div className={`${styles.alignment} col-12`}>
@@ -65,11 +62,11 @@ export default function Addnew() {
               </div> }
               { addNew === true && addWeb === false &&
               <div className={`${styles.addsite} row`}>
-                <div className={`${styles.alignment} col-12`}>
+                <div className={`${styles.alignment} col-11 col-lg-5`}>
                   <h3 className={styles.selectweb}>
                     Type in your website URL
                   </h3>
-                  <div className="d-flex justify-content-center">
+                  <div className="d-">
                     <div className={styles.submitbox}>
                       <div className={styles.submitcontainer}>
                         <input className={styles.inputs} placeholder="www.example.com"/>
@@ -86,20 +83,13 @@ export default function Addnew() {
                   <span className="text-danger">Note:</span> Do not include www., http:// or https:// and do not include sub-directory like example.com/blog1.
                     </div>
                     </div>
-                    {/* <button
-                      className={styles.btncontinue}
-                      onClick={() => {
-                        setAddNew(!addNew);
-                      }}
-                    >
-                      Continue
-                    </button> */}
+                   
                   </div>
                 </div>
               </div>
               }
               {addWeb === true && confirmWeb === false &&
-                <div className={`${styles.thirdsection} row`}>
+                <div className={`${styles.thirdsection} row px-1`}>
                 <div className={`${styles.alignment} col-12`}>
                   <h3 className={styles.selectweb}>
                     Type in your website URL two
@@ -117,8 +107,9 @@ export default function Addnew() {
 
                   <div>
                     <div className={`${styles.webbox} row`}>
-                    <div className={`${styles.webcontainer} col-6`}>
-                        <div className={styles.webtexts}>
+                      <div className={`${styles.webcontainer} col-10 col-lg-6`}>
+                        <div>
+                      <div className={styles.webtexts}>
                             <div>URL:</div>
                             <div>https://egyptianstreets.com/</div>
                         </div>
@@ -131,13 +122,14 @@ export default function Addnew() {
                             <div>Egypts leading independent media organization.</div>
                         </div>
                         <div className={styles.webtexts}>
-
                             <div>Homepage Snapshot:</div>
                         </div>
-                       <div className="d-flex">
-                        <Image src="/screenshot.png" alt='website' width={500} height={200} />
+                        <div className="d-flex">
+                        <Image src="/screenshot.png" alt='website' width={500} height={200} className={styles.imgcontainer}/>
                        </div>
-                    </div>
+                        </div>
+                      </div>
+                    
                     </div>
                     <button
                       className={styles.btnyes}
@@ -173,15 +165,15 @@ export default function Addnew() {
                   </div>
 
                   <div>
-                    <div className={`${styles.webbox} row`}>
+                    <div className={`${styles.webbox} row px-2`}>
                       <div className="col-12 d-flex justify-content-center  ">
                         <div>
-                        <div className={styles.textwrapper}>
+                        <div className={styles.textwapper}>
                         <div className={styles.steps}>Step 1:</div>
                         <div className={styles.step}>Login to your wordpressss dashboard</div>
                         </div>
                        
-                        <Image src='/stepone.png' alt="linkcreator steps" width={500} height={250} /> 
+                        <Image src='/stepone.png' alt="linkcreator steps" width={500} height={250} className={styles.imgcontainer} /> 
                        
                         </div>
                       </div>
@@ -213,7 +205,7 @@ export default function Addnew() {
                   <h3 className={styles.selectplugin}>
                   👍 Well-done, You are almost there.
                   </h3>
-                  <div className="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center px-2">
                     <div className={styles.submitboxx}>
                       <div className={styles.submitcontainer}>
                         <input className={styles.inputs} placeholder="www.example.com"/>
@@ -223,15 +215,15 @@ export default function Addnew() {
                   </div>
 
                   <div>
-                    <div className={`${styles.webbox} row`}>
+                    <div className={`${styles.webbox} row px-2`}>
                       <div className="col-12 d-flex justify-content-center  ">
                         <div>
-                        <div className={styles.textwrapper}>
+                        <div className={styles.textwapper}>
                         <div className={styles.steps}>Step 2:</div>
                         <div className={styles.step}>Now search for our plugin (LinkCreatorAI), install and activate it.</div>
                         </div>
                        
-                        <Image src='/steptwo.png' alt="linkcreator steps" width={500} height={250} /> 
+                        <Image src='/steptwo.png' alt="linkcreator steps" width={500} height={250} className={styles.imgcontainer} /> 
                        
                         </div>
                       </div>
@@ -263,7 +255,7 @@ export default function Addnew() {
                   <h3 className={styles.selectplugin}>
                   👍 Well-done, You are almost there.
                   </h3>
-                  <div className="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center px-2">
                     <div className={styles.submitboxx}>
                       <div className={styles.submitcontainer}>
                         <input className={styles.inputs} placeholder="www.example.com"/>
@@ -273,15 +265,15 @@ export default function Addnew() {
                   </div>
 
                   <div>
-                    <div className={`${styles.webbox} row`}>
+                    <div className={`${styles.webbox} row px-2`}>
                       <div className="col-12 d-flex justify-content-center  ">
                         <div>
-                        <div className={styles.textwrapper}>
+                        <div className={styles.textwapper}>
                         <div className={styles.steps}>Step 3:</div>
                         <div className={styles.step}>Kindly open the plugin and login with your LinkCreatorAI credentials.</div>
                         </div>
                        
-                        <Image src='/stepthree.png' alt="linkcreator steps" width={500} height={250} /> 
+                        <Image src='/stepthree.png' alt="linkcreator steps" width={500} height={250} className={styles.imgcontainer}/> 
                        
                         </div>
                       </div>
@@ -313,7 +305,7 @@ export default function Addnew() {
                   <h3 className={styles.selectplugin}>
                   👍 Well-done, You are almost there.
                   </h3>
-                  <div className="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center px-2">
                     <div className={styles.submitboxx}>
                       <div className={styles.submitcontainer}>
                         <input className={styles.inputs} placeholder="www.example.com"/>
@@ -323,15 +315,15 @@ export default function Addnew() {
                   </div>
 
                   <div>
-                    <div className={`${styles.webbox} row`}>
+                    <div className={`${styles.webbox} row px-2`}>
                       <div className="col-12 d-flex justify-content-center  ">
                         <div>
-                        <div className={styles.textwrapper}>
+                        <div className={styles.textrapper}>
                         <div className={styles.steps}>Step 3:</div>
                         <div className={styles.step}>Lastly kindly copy your API KEY above and paste in the API KEY field in the plugin. then click “Confirm”</div>
                         </div>
                        
-                        <Image src='/stepthree.png' alt="linkcreator steps" width={500} height={250} /> 
+                        <Image src='/stepthree.png' alt="linkcreator steps" width={500} height={250} className={styles.imgcontainer}/> 
                        
                         </div>
                       </div>
@@ -359,8 +351,11 @@ export default function Addnew() {
               
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+       </div>
+       </div>
+          </div>
+        )
+    }
+
+
+

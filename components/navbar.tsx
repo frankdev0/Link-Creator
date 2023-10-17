@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from '@/styles/Dashboard.module.css'
 import { FaBell } from 'react-icons/fa';
+import { HiBars3 } from 'react-icons/hi2';
 import { AiOutlineSearch} from 'react-icons/ai';
 
 
@@ -11,6 +12,7 @@ export default function Navbar() {
     <div>
   <div className={styles.navsection}>
     <div className={`${styles.navarea} row`}>
+      <HiBars3/>
       <div className={`${styles.logobg} col-3 d-flex flex-column align-items-center`}>
         <Image src="/logo.png" width={50} height={50} alt="logo" />
       </div>
