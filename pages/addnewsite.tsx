@@ -1,5 +1,5 @@
-import Mainnav from "@/global/mainnavbar";
-import Newside from "@/global/mainsidebar";
+import Mainnav from "@/global/navbar";
+import Newside from "@/global/sidebar";
 import { useState } from "react";
 import styles from "@/styles/Newsite.module.css";
 import Image from "next/image";

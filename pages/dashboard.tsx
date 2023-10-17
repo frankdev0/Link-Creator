@@ -2,8 +2,8 @@ import styles from "@/styles/Dashboard.module.css";
 import { HiCursorClick } from "react-icons/hi";
 import { LiaLinkSolid } from "react-icons/lia";
 import Table from "@/components/table";
-import Newside from "@/global/mainsidebar";
-import Mainnav from "@/global/mainnavbar";
+import Newside from "@/global/sidebar";
+import Mainnav from "@/global/navbar";
 
 export default function Dashboard() {
   return (
@@ -12,6 +12,7 @@ export default function Dashboard() {
       <div>
         <Mainnav />
         <div className={`${styles.contentbody}`}>
+          <div className={styles.innerbody}>
           <div className={styles.boxcontainer}>
             <div>
                <div className={styles.linklabel}>Internal Links</div>
@@ -87,6 +88,8 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
+          </div>
+
         </div>
       </div>
     </div>

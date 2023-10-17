@@ -2,8 +2,8 @@
 import styles from "@/styles/Table.module.css";
 import Data from "@/Data.json";
 import Table from "@/components/table";
-import Mainnav from "@/global/mainnavbar";
-import Newside from "@/global/mainsidebar";
+import Mainnav from "@/global/navbar";
+import Newside from "@/global/sidebar";
 
 
 

@@ -1,5 +1,7 @@
-import Navbar from "@/components/navbar";
-import Sidebar from "@/components/sidebar";
+import Navbar from "@/components/oldnavbar";
+import Sidebar from "@/components/oldsidebar";
+import Mainnav from "@/global/navbar";
+import Newside from "@/global/sidebar";
 import styles from "@/styles/Newsite.module.css";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,15 +15,12 @@ export default function Profile() {
   };
 
   return (
-    <div>
-      <Navbar />
-
-      <div className="d-flex">
-        <div className={styles.sidebarwidth}>
-          <Sidebar />
-        </div>
-        <div className={styles.contentwidth}>
-          <div className={styles.innerbody}>
+    <div className={styles.container}>
+       <Newside/>
+       <div>
+        <Mainnav/>
+       <div className={`${styles.contentbody}`}>
+       <div className={styles.innerbody}>
             <div className="d-flex px-4 py-4">
               <div className={styles.containerborder}>
                 <div className="row px-4 ">
@@ -332,8 +331,10 @@ export default function Profile() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+       </div>
+       </div>
+          </div>
+        )
+    }
+
+

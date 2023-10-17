@@ -1,5 +1,5 @@
-import Mainnav from "@/global/mainnavbar";
-import Newside from "@/global/mainsidebar";
+import Mainnav from "@/global/navbar";
+import Newside from "@/global/sidebar";
 import styles from "@/styles/Mydashboard.module.css";
 
 
