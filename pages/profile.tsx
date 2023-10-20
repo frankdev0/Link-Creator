@@ -1,5 +1,3 @@
-import Navbar from "@/components/oldnavbar";
-import Sidebar from "@/components/oldsidebar";
 import Mainnav from "@/global/navbar";
 import Newside from "@/global/sidebar";
 import styles from "@/styles/Newsite.module.css";
@@ -28,7 +26,7 @@ export default function Profile() {
                   <p className="py-2 px-2">Profile</p>
                   </div>
                   
-                  <div className={`${styles.checkborder} col-12 col-md-4`}>
+                  <div className={`${styles.checkborder} col-12 col-md-12 col-lg-4`}>
                     <div className={styles.planborder}>
                       <div>
                         <div className={styles.profilepicborder}>
@@ -68,13 +66,10 @@ export default function Profile() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-12 col-md-8 col-lg-8 d-flex justify-content-center">
+                  <div className="col-12 col-md-12 col-lg-8 d-flex justify-content-center">
                     <div className={styles.planborder}>
                       <div>
-                        {/* <div className={styles.profilesettings}>
-                          <div className={styles.account}>Account Settings</div>
-                          <div className={styles.account}>Billing</div>
-                        </div> */}
+                        
                          <div className={styles.profilesettings}>
         <div
           className={`${styles.account} ${
@@ -94,11 +89,7 @@ export default function Profile() {
         </div>
       </div>
 
-      {/* Render the content based on the activeTab */}
-      {/* {activeTab === 'accountSettings' && (
-        <div>Account Settings Content</div>
-      )}
-      {activeTab === 'billing' && <div>Billing Content</div>} */}
+      
 {activeTab === 'accountSettings' && (
                         <div>
                           <form className={styles.formcontainer}>
@@ -232,16 +223,20 @@ export default function Profile() {
                         )}
                         {/* Billing Information */}
                         {activeTab === 'billing' &&
-                        <div className={styles.billingcontainer}>
-                    <div className={styles.negativepadding}>
+                       <div>
+                          
                             <div className={styles.billingdesc}>
-                            <div>
-                            <p className={styles.plans}>Your Plan</p>
-                            <h3 className={styles.profilename}>Basic Plan</h3>
+                              <div>
+                              <div className={styles.plans}>Your Plan</div>
+                            <div className={styles.profilename}>Basic Plan</div>
+                              </div>
+                            
+                            <div className={styles.btncontainer}>
+                              <button className={styles.btncontinue}>Upgrade Plan</button>
                             </div>
-                            <button className={styles.btncontinue}>Upgrade Plan</button>
                             </div>
-                            <div className={styles.billingdesc}>
+                          
+                          <div className={styles.billingdesc}>
                               <p className={styles.billingheaders}>Website(s)</p>
                               <p className={styles.billingvalue}>1</p>
                             </div>
@@ -258,7 +253,7 @@ export default function Profile() {
                               <p className={styles.billingvalue}>Free</p>
                             </div>
                             <div className={styles.paymentdetails}>
-                            {/* <div className={`${styles.card} row`}>
+                            {/* <div className={`${styles.paymentborder} row px-3 pb-`}>
                             <div className={`${styles.paymentborder} col-12 col-lg-6`}>
                               <p className={styles.help}>Payment Details</p>
                               <p className={styles.addcard}> ➕ Add card</p>
@@ -268,7 +263,7 @@ export default function Profile() {
                               <p className={styles.billingempty}>😭 History is empty</p>
                             </div>
                             </div> */}
-                            <div className="row px-3 pb-3">
+                            <div className='row px-3'>
                               <div className={`${styles.paymentborder} col-12 col-lg-6`}>
                                 <div className="d-flex justify-content-between">
                                 <p className={styles.help}>Payment Details</p>
@@ -284,16 +279,24 @@ export default function Profile() {
                                     
                                   </div>
                                 </div>
-                                <div className={styles.billingcycle}>Your billing cycle will occur on the 20th of
-                                      each month.
-                                      Your next billing is <span className={styles.cycledate}>20th, November 2023</span></div>
+                                
                               </div>
-                              <div className="col-12 col-lg-6">
+                              <div className="col-12 col-lg-6 ">
                                 <div className="d-flex justify-content-between">
                                   <p className={styles.help}>Subscription History</p>
                                   <p className={styles.cardinfo}>View all</p>
                                 </div>
-                                <div className="d-flex justify-content-between">
+                                
+                              </div>
+                            </div>
+                            <div className="row px-3 mb-3">
+                            <div className={`${styles.paymentborder} col-12 col-lg-6`}>
+                            <div className={styles.billingcycle}>Your billing cycle will occur on the 20th of
+                               each month.
+                                Your next billing is <span className={styles.cycledate}>20th, November 2023</span></div>
+                            </div>
+                            <div className="col-12 col-lg-6 mt-3">
+                            <div className="d-flex justify-content-between">
                                   <p className={styles.carddetails}>20th October</p>
                                   <p className={styles.carddetails}>$1</p>
                                 </div>
@@ -309,20 +312,27 @@ export default function Profile() {
                                   <p className={styles.carddetails}>13th August</p>
                                   <p className={styles.carddetails}>$10</p>
                                 </div>
+                            </div>
+                            </div>
+                          
+                            <div className={styles.bottomitems}>
+                              <div className={styles.bottomcontainer}>
+                              <div className={`${styles.textborder} row `}>
+                         
+                          <div className="col-12 col-lg-6">
+                          <p className={styles.help}>Need more website or page slot?</p>
+                          </div>
+                          <div className="col-12 col-lg-6">
+                          <p className={styles.nohelp}>Customize Plan</p>
+                          </div>
+                  
+                          </div>
                               </div>
-                            </div>
-                            </div>
-                            <div className={`${styles.bottomborder} pb-4`}>
-                          <div className={styles.bottomitems}>
-                            <p className={styles.help}>Need more website or page slot?</p>
-                            <p className={styles.nohelp}>Customize Plan</p>
+                           
                           </div>
-                          </div>
-                            <div>
-
+                          {/* </div> */}
                             </div>
-                          </div>
-                        </div>
+                       </div>
                           }
                       </div>
                     </div>

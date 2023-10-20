@@ -6,7 +6,7 @@
 }
 
 .innerbody{
-  height: 100vh;
+ 
   width: 100%;
   /* overflow-y: scroll; */
   /* overflow-x: scroll; */
@@ -264,10 +264,10 @@ font-weight: 600;
   grid-column: span 3;
 }
 .charttwo {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 .chartthree {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
 
@@ -278,6 +278,16 @@ font-weight: 600;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* .tablecontent{
+  width: 70%;
+} */
+
+.boxtext{
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 1rem;
 }
 
 .tablestat{
@@ -299,7 +309,7 @@ font-weight: 600;
 .contentbody{
   margin-top: 1rem;
   padding-left: 0.5rem;
-  overflow-y: scroll;
+  
 }
 
 @media  screen and (max-width: 1200px) {
@@ -360,4 +370,64 @@ font-weight: 600;
   padding: 0 2rem;
 }
 
+}
+
+.piecharts{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.piechartss {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pieLabels {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.customTable {
+  width: 100%; 
+  border-collapse: collapse; 
+
+}
+
+.customTable thead {
+  background-color: #F5F5F5; 
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+.customTable th {
+  padding: 20px; 
+}
+
+
+.customTable td {
+  padding: 20px 20px; 
+}
+
+
+.customTable .oddrow {
+  background-color: #F5F5F5;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.customTable .evenrow {
+  background-color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
 }

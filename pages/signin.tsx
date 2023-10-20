@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import styles from '@/styles/Signin.module.css'
 import Link from 'next/link'
-import { HiOutlineLockClosed, HiOutlineLockOpen, HiAtSymbol } from 'react-icons/hi';
+import { HiOutlineLockClosed, HiOutlineLockOpen } from 'react-icons/hi';
+import { HiOutlineEnvelope } from 'react-icons/hi2';
 import { useState } from "react";
 
 
@@ -41,7 +42,7 @@ export default function Signin() {
                         className={`${styles.passwordinput} form-contol`}
                       />
                       <div className={styles.passwordIconContainer} >
-                        <HiAtSymbol />
+                        <HiOutlineEnvelope />
                       </div>
                     </div>
                     </div>
@@ -61,7 +62,23 @@ export default function Signin() {
                       </div>
                     </div>
                   </div>
-                  <div className={styles.inputContainer}>
+                    <div className={styles.inputContainer}>
+                    <label htmlFor="confirm password" className={styles.labels}>
+                      confirm Password:
+                    </label>
+                    <div className={styles.passwordInputContainer}>
+                      <input
+                        type={passwordVisible ? 'text' : 'password'}
+                        placeholder="********"
+                        name="confirmPassword"
+                        className={`${styles.passwordinput} form-contol`}
+                      />
+                      <div className={styles.passwordIconContainer} onClick={() => setPasswordVisible(!passwordVisible)}>
+                        {passwordVisible ? <HiOutlineLockOpen /> : <HiOutlineLockClosed/>} 
+                      </div>
+                    </div>
+                  </div>
+                  {/* <div className={styles.inputContainer}>
                       <label htmlFor="email" className={styles.labels}>Confirm Password:</label>
                       <div className={styles.passwordInputContainer}>
                       <input
@@ -71,7 +88,7 @@ export default function Signin() {
                         className={`${styles.passwordinput} form-contol`}
                       />
                     </div>
-                    </div>
+                    </div> */}
                     <div className={styles.btnsection}>
                     <button className={styles.btnsubmit}>Sign Up</button>
                     </div>
@@ -80,7 +97,7 @@ export default function Signin() {
             </div>
             <div className={styles.socialicons}>
             <div className={styles.socials}>
-            <p className='d-flex justify-content-center mt-5'>or Sign up with</p>
+            <p  className={`${styles.optional} d-flex justify-content-center mt-5`}>or Sign up with</p>
             <div className='d-flex justify-content-center'>
                 <div className={styles.socialbox}>
                 <Image src='/google.png' width={30} height={30} alt='google' priority />

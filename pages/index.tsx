@@ -114,7 +114,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.noaccount}>
-              <span>
+              <span className={styles.noaccountt}>
                 Dont have an account? Sign Up{" "}
                 <Link href="/signin" className={styles.linkto}>
                   Here

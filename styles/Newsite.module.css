@@ -23,8 +23,8 @@
 
   .containerborder{
     border: 1px solid #ccc;
-    height: 100vh;
-    overflow-y: scroll;
+  
+    /* overflow-y: scroll; */
     overflow-x: hidden;
     width: 100%;
     margin-top: 1rem;
@@ -90,6 +90,7 @@
     width: 150px;
     height: 32px;
     border-radius: 5px;
+    font-size: 0.75rem;
     border: none;
     color: #ffffff;
     background-color: #471C8F;
@@ -206,10 +207,9 @@
   }
 
   .profilename{
-    font-size: 16px;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #471C8F;
-    text-align: center;
     margin-top: 1rem;
   }
 
@@ -341,15 +341,23 @@
     padding: 1rem 1.5rem;
   }
   .billingcontainer{
-    width: 100%;
-    /* padding: 1rem 4.3rem; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-content: space-between; */
+    width: 550px;
+   padding: 2rem 1rem;
+  }
+
+  .btncontainer{
+    display: flex;
+    justify-content: flex-end;
   }
 
  .billingdesc{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 530px;
+  width: 100%;
   padding: 0.5rem 1rem;
  }
 
@@ -357,7 +365,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 530px;
+  width: 100%;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
@@ -373,23 +381,42 @@
 
  .bottomitems{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  width: 100%;
+ }
+
+ .bottomcontainer{
+  display: flex;
   align-items: center;
-  width: 480px;
+  text-align: center;
+  justify-content: center; 
+ }
+
+ .textborder{
+  width: 500px;
+  height: auto;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding-top: 0.5rem;
+  padding: 0.8rem;
  }
+
+
 
  .help{
   font-size: 0.75rem;
   font-weight: 500;
   color: #878686;
+  padding: 0;
+  margin: 0;
  }
  .nohelp{
   font-size: 0.75rem;
   font-weight: 500;
   color: #471C8F;
+  padding: 0;
+  margin: 0;
  }
 
  .billingcycle{
@@ -406,7 +433,6 @@
 
  .carddetails{
   display: flex;
-  padding-left: 1rem;
   align-items: center;
   font-weight: 400;
   font-size: 11px;
@@ -417,8 +443,7 @@
   font-weight: 500;
   color: #471C8F;
   cursor: pointer;
-  padding-left: 1.5rem;
-  padding-top: 1rem;
+  padding: 2rem;
  }
  .cardinfo{
   font-size: 0.75rem;
@@ -432,14 +457,11 @@
   font-weight: 500;
   color: #000;
   cursor: pointer;
-  padding-left: 1.5rem;
-  padding-top: 1rem;
+  padding: 2rem;
 }
 
 .paymentborder{
   border-right: 1px solid #ccc;
-  padding-bottom: 0.3rem;
-  height: 100px;
 }
  .card{
   width: 520px;
@@ -450,16 +472,17 @@
  }
 
  .paymentdetails{
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   padding-top: 1rem;
  }
 
+
  @media screen and (max-width:900px) {
-  .billingdesc {
+  /* .billingdesc {
     width: 100%; 
     flex-direction: column; 
     align-items: center; 
-  }
+  } */
 }
 
 .billingheaders{
@@ -528,7 +551,7 @@
 }
 
 .plans{
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 400;
   color: #878686;
 
@@ -570,6 +593,10 @@
     font-size: 1.2rem;
   }
 
+  .textborder{
+    width: 100%;
+  }
+
 
 }
 
@@ -591,4 +618,23 @@
     width: auto;
 }
 
+.billingcontainer{
+  width: 100%;
+  text-align: start;
 }
+
+.billingborder{
+  width: 100%;
+}
+
+.paymentborder{
+  border-right: none;
+}
+
+.btncontinue{
+  width: 100px;
+}
+
+}
+
+

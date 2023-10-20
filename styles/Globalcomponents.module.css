@@ -321,7 +321,7 @@
     .aside{
         position: fixed;
         left: 0;
-        background-color: #878686;
+        background-color: #D9D9D9;
         width: 18rem;
         z-index: 3;
         height: 100vh;
@@ -332,7 +332,7 @@
     .notaside{
         position: fixed;
         left: 0;
-        background-color: #878686;
+        background-color: #D9D9D9;
         width: 18rem;
         z-index: 3000000000;
         height: 100vh;
@@ -341,7 +341,7 @@
     }
 
     .notaside .tops {
-        background-color: #fff;
+        background-color: #D9D9D9;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -410,6 +410,10 @@
     left: 0;
     margin-top: 6rem;
     width: 100%;
+}
+
+.sidebar {
+  background-color: #D9D9D9;
 }
 
 }
