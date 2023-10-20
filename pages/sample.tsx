@@ -1,6 +1,6 @@
 import Mainnav from "@/global/navbar";
 import Newside from "@/global/sidebar";
-import styles from "@/styles/Mydashboard.module.css";
+import styles from "@/styles/Globalcomponents.module.css";
 
 
 
