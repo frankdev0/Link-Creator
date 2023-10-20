@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import styles from '@/styles/Signin.module.css'
-import Link from 'next/link'
 import { HiOutlineLockClosed, HiOutlineLockOpen } from 'react-icons/hi';
 import { HiOutlineEnvelope } from 'react-icons/hi2';
 import { useState } from "react";
+import Head from 'next/head';
 
 
 
@@ -12,9 +12,17 @@ export default function Signin() {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
-    <div>
-    <div>
-        <div className='row'>
+    <>
+      <Head>
+        <title>Link Creator AI</title>
+        <meta name="description" content="Linkcreate AI" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+    
+    <div className={styles.bgimg}>
+      <div className={styles.container}>
+        <div className={`${styles.formContainer} row`}>
             <div className={`${styles.formbodyy} col-12 col-md-6`}>
             <div className={styles.logosignin}>
             <Image src='/logo.png' width={50} height={50} alt='logo' />
@@ -78,17 +86,7 @@ export default function Signin() {
                       </div>
                     </div>
                   </div>
-                  {/* <div className={styles.inputContainer}>
-                      <label htmlFor="email" className={styles.labels}>Confirm Password:</label>
-                      <div className={styles.passwordInputContainer}>
-                      <input
-                        type='password'
-                        placeholder="********"
-                        name="password"
-                        className={`${styles.passwordinput} form-contol`}
-                      />
-                    </div>
-                    </div> */}
+                  
                     <div className={styles.btnsection}>
                     <button className={styles.btnsubmit}>Sign Up</button>
                     </div>
@@ -134,5 +132,6 @@ export default function Signin() {
         </div>
     </div>
 </div>
+</>
   )
 }

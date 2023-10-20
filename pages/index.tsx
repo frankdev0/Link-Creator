@@ -20,14 +20,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Link Creator AI</title>
         <meta name="description" content="Linkcreate AI" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-      <div>
-        <div className="row">
+      <div className={styles.bgimg}>
+      <div className={styles.container}>
+        <div className={`${styles.formContainer} row`}>
           <div className={`${styles.formbody} col-12 col-md-6`}>
             <div className={styles.logosignin}>
               <Image src="/logo.png" width={50} height={50} alt="logo" />

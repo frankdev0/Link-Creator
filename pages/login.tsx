@@ -12,9 +12,9 @@ export default function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
-    <div>
-      <div>
-        <div className="row">
+    <div className={styles.bgimg}>
+      <div className={styles.contianer}>
+        <div className={`${styles.formContainer} row`}>
           <div className={`${styles.formbody} col-12 col-md-6`}>
             <div className={styles.logosignin}>
               <Image src="/logo.png" width={50} height={50} alt="logo" />

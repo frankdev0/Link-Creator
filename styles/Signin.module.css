@@ -1,3 +1,24 @@
+.bgimg {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+
 .logosignin{
     display: flex;
     justify-content: center;
@@ -189,20 +210,59 @@ background-color: #5751b3;
     font-weight: 400;
 }
 
+@media only screen and (max-width:1200px) {
+  .overlayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #ffffff;
+    width: 100%;
+   padding: 20px;
+  }
+}
+
 @media only screen and (max-width:700px) {
     .heroimg{
         display: none;
     }  
-    .formbody{
-        margin-top: 30%;   
+    /* .formbody{
+        margin-top: 0%;   
     }
     .formbodyy{
-        margin-top: 30%;   
-    }
+        margin-top: 10%;   
+    } */
 
     .noaccount{
+      display: flex;
+      justify-content: flex-start;
         padding-left: 3.6rem;
         width: 100%;
+    }
+
+    .bgimg {
+      margin: 0;
+      padding: 0;
+      background: url('/heroimage.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .formContainer {
+      display: block;
+      background-color: white;
+      padding: 20px;
+      width: 90%;
+      height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 }
 
