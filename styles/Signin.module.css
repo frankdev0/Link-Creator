@@ -227,6 +227,10 @@ background-color: #5751b3;
     .heroimg{
         display: none;
     }  
+
+    .formcontent {
+      width: 100%;
+    }
     /* .formbody{
         margin-top: 0%;   
     }
@@ -258,11 +262,17 @@ background-color: #5751b3;
     .formContainer {
       display: block;
       background-color: white;
-      padding: 20px;
       width: 90%;
       height: 80%;
       border-radius: 10px;
+      padding: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .passwordInputContainer {
+    width: 100%;
+    }
+    .passwordinput{
+      width: 100%;
     }
 }
 

@@ -5,6 +5,7 @@ import Data from "@/Data.json";
 export default function Table() {
   return (
     <div className={styles.tableContainertwo}>
+      <div className={styles.recentadd}>Recently Added Pages</div>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -21,28 +22,36 @@ export default function Table() {
             <td className={styles.td}>Ada Oha</td>
             <td className={styles.td}>Filling Station</td>
             <td className={styles.td}>Agungi</td>
-            <td className={styles.td}>Estate</td>
+            <td className={styles.td}>
+              <button className={styles.btnsubmit}>view</button>
+            </td>
           </tr>
           <tr className={styles.secondrow}>
             <td className={styles.td}>1</td>
             <td className={styles.td}>Ada Oha</td>
             <td className={styles.td}>Filling Station</td>
             <td className={styles.td}>Agungi</td>
-            <td className={styles.td}>Estate</td>
+            <td className={styles.td}>
+              <button className={styles.btnsubmit}>view</button>
+            </td>
           </tr>
           <tr className={styles.firstrow}>
             <td className={styles.td}>1</td>
             <td className={styles.td}>Ada Oha</td>
             <td className={styles.td}>Filling Station</td>
             <td className={styles.td}>Agungi</td>
-            <td className={styles.td}>Estate</td>
+            <td className={styles.td}>
+              <button className={styles.btnsubmit}>view</button>
+            </td>
           </tr>
           <tr className={styles.secondrow}>
             <td className={styles.td}>1</td>
             <td className={styles.td}>Ada Oha</td>
             <td className={styles.td}>Filling Station</td>
             <td className={styles.td}>Agungi</td>
-            <td className={styles.td}>Estate</td>
+            <td className={styles.td}>
+              <button className={styles.btnsubmit}>view</button>
+            </td>
           </tr>
         </tbody>
       </table>

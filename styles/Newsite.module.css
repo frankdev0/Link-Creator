@@ -339,6 +339,7 @@
 
   .formcontainer{
     padding: 1rem 1.5rem;
+    width: 100%;
   }
   .billingcontainer{
     display: grid;
@@ -496,6 +497,7 @@
 
  
 .btnborder {
+  padding-left: 2rem;
   border-top: 1px solid #ccc;
   width: calc(100% + 2.9rem); 
   margin-left: -1.5rem;
@@ -631,10 +633,20 @@
   border-right: none;
 }
 
+.profileinputs {
+  width: 100%;
+}
+
 .btncontinue{
   width: 100px;
 }
 
+.planborder{
+  border: none;
 }
 
+.btnborder {
+  text-align: center;
+}
 
+}
