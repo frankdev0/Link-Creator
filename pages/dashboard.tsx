@@ -63,7 +63,8 @@ export default function Dashboard() {
             </div>
             </div>
           </div>
-          <div className={styles.innerbody}>
+          {/* CHARTS SECTION */}
+          
             <div className="py-4 ">
               <div className={`${styles.chartcontainer}`}>
                 <div className={styles.chartone}>
@@ -109,14 +110,14 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="d-flex py-4">
+            <div className=" py-4">
               <div className={`${styles.tablebody} row`}>
                 <div className="col-12">
                   <Table />
                 </div>
               </div>
             </div>
-          </div>
+          
           </div>
 
         </div>

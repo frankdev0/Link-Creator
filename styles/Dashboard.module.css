@@ -6,10 +6,7 @@
 }
 
 .innerbody{
- 
   width: 100%;
-  /* overflow-y: scroll; */
-  /* overflow-x: scroll; */
 }
 
 .navarea{
@@ -217,6 +214,7 @@
 }
 
 .boxcontainer {
+  width: 100%;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -236,6 +234,7 @@ font-weight: 600;
 }
 
 .eachbox{
+  width: 100%;
   display: flex;
   flex-direction: column; 
   justify-content: center; 
@@ -262,22 +261,21 @@ font-weight: 600;
 
 .chartone {
   grid-column: span 3;
+  width: 100%;
 }
 .charttwo {
   grid-column: span 1;
+  width: 100%;
 }
 .chartthree {
   grid-column: span 3;
+  width: 100%;
 }
 
 
 .tablebody{
-  padding-left: 2rem;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+margin: auto;
 }
 
 /* .tablecontent{
@@ -294,21 +292,21 @@ font-weight: 600;
   border: 1px solid #ccc;
   border-radius: 10px;
   height: 370px;
+  width: 100%;
 }
 
 /* New CSS Styling starts from here for the container page */
 
 .container {
-  display: grid;
   width: 100%;
-  margin: 0 auto;
-  /* gap: 1.8rem; */
+  display: grid;
+  margin: 0;
   grid-template-columns: 14rem auto;
 }
 
 .contentbody{
   margin-top: 1rem;
-  padding-left: 0.5rem;
+  width: 100%;
   
 }
 
@@ -321,6 +319,7 @@ font-weight: 600;
 
   .boxcontainer {
     grid-template-columns: repeat(2, 1fr); 
+    width: 100%;
   }
 
   .chartcontainer {
@@ -332,12 +331,15 @@ font-weight: 600;
   
   .chartone {
     grid-column: span 1;
+    width: 100%;
   }
   .charttwo {
     grid-column: span 1;
+    width: 100%;
   }
   .chartthree {
     grid-column: span 1;
+    width: 100%;
   }
 
 
@@ -354,32 +356,28 @@ font-weight: 600;
     position: relative;
     left: 0;
     margin-top: 6rem;
-    width: 55%;
+    width: 100%;
 }
 .boxcontainer {
   display: grid;
   grid-template-columns: 1fr; 
   gap: 20px; 
   text-align: center;
+  width: 100%;
+  padding: 0 0.5rem;
 }
 
 .chartcontainer {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
-  padding: 0 2rem;
+  width: 100%;
+  padding: 0 0.5rem;
 }
 
 }
 
 .piecharts{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  
-}
-
-.piechartss {
   width: 100%;
   display: flex;
   align-items: center;

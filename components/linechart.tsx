@@ -33,7 +33,7 @@ export function Linecharts () {
       bar: {
         horizontal: false,
         borderRadius: 10,
-        columnWidth: '40%',
+        columnWidth: '50%',
         endingShape: 'rounded',
         dataLabels: {
           position: 'right',
@@ -84,8 +84,8 @@ export function Linecharts () {
   ];
 
   return (
-    <div id="chart">
-      <ApexChart options={options} series={series} type="bar" height={300} className={styles.piecharts}/>
+    <div className={styles.piecharts}>
+      <ApexChart options={options} series={series} type="bar" height={300} width={350} />
     </div>
   );
 };

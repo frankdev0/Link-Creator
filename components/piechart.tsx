@@ -20,8 +20,8 @@ export function PieChart() {
   const series = [44, 55, 13];
 
   return (
-    <div>
-      <ApexChart type='pie' options={options} series={series} height={300} width={400} className={styles.piechartss}/>
+    <div className={styles.piecharts}>
+      <ApexChart type='pie' options={options} series={series} height={300} width={300} />
     </div>
   );
 }
