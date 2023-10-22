@@ -197,6 +197,12 @@
   padding-left: 0.5rem;
   overflow-y: scroll;
 }
+.allsitecontainer{
+  margin-top: 4rem;
+  padding-left: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
 
 @media  screen and (max-width: 1200px) {
 
@@ -221,5 +227,16 @@
     margin-top: 6rem;
     width: 55%;
 }
+  .allsitecontainer{
+    position: relative;
+    left: 0;
+    margin-top: 6rem;
+    width: 60%;
+}
+
+.btnsubmit{
+  width: 100%;
+}
+
 
 }

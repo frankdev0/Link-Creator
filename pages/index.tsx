@@ -75,7 +75,9 @@ export default function Home() {
                 </div>
 
                 <div className={styles.btnsection}>
+                <Link href='./dashboard'>
                   <button className={styles.btnsubmit}>Login</button>
+                  </Link>
                 </div>
               </form>
             </div>

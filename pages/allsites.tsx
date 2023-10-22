@@ -14,7 +14,7 @@ export default function Samplenew () {
    <Newside/>
    <div>
     <Mainnav/>
-   <div className={`${styles.contentbody}`}>
+   <div className={`${styles.allsitecontainer} mx-4`}>
    <div className={styles.innerbody}>
         
         <div className='d-flpy-4'>

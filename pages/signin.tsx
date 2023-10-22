@@ -4,6 +4,7 @@ import { HiOutlineLockClosed, HiOutlineLockOpen } from 'react-icons/hi';
 import { HiOutlineEnvelope } from 'react-icons/hi2';
 import { useState } from "react";
 import Head from 'next/head';
+import Link from 'next/link';
 
 
 
@@ -88,7 +89,9 @@ export default function Signin() {
                   </div>
                   
                     <div className={styles.btnsection}>
+                    <Link href='./dashboard'>
                     <button className={styles.btnsubmit}>Sign Up</button>
+                    </Link>
                     </div>
                    
                 </form>
