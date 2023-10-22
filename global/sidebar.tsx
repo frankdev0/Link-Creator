@@ -39,6 +39,7 @@ export default function Newside() {
 
   const handleMenuItemClick = (itemName: string) => {
     setActiveItem(itemName);
+    setToggle(!toggle)
   };
 
 
@@ -47,10 +48,10 @@ export default function Newside() {
       <aside className={toggle ? styles.notaside : styles.aside} >
         <div className={styles.tops}>
           <div className={styles.logo}>
+            <Link href='/dashboard'>
             <Image src="/logo.png" alt="logo" width={50} height={50} className={styles.logos} />
-            {/* <h2>
-              EGA <span>TOR</span>
-            </h2> */}
+            </Link>
+         
           </div>
           <div className={styles.close} id="close-btn" onClick={() => setToggle(!toggle)}>
             <AiOutlineClose className={styles.icons}/>
