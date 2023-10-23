@@ -26,6 +26,7 @@ export default function Signin() {
       
         <div className={`${styles.formContainer} row`}>
             <div className={`${styles.formbodyy} col-12 col-md-6`}>
+            <div className={`${styles.formbodyyy}`}>
             <div className={styles.logosignin}>
             <Image src='/logo.png' width={50} height={50} alt='logo' />
             </div>
@@ -99,7 +100,7 @@ export default function Signin() {
             </div>
             <div className={styles.socialicons}>
             <div className={styles.socials}>
-            <p  className={`${styles.optional} d-flex justify-content-center mt-5`}>or Sign up with</p>
+            <p  className={`${styles.optional} d-flex justify-content-center mt-3`}>or Sign up with</p>
             <div className='d-flex justify-content-center'>
                 <div className={styles.socialbox}>
                 <Image src='/google.png' width={30} height={30} alt='google' priority />
@@ -115,6 +116,7 @@ export default function Signin() {
             </div>
             </div>
             
+            </div>
             </div>
             {/* HERO IMAGE */}
             <div className={`${styles.heroimg} col-12 col-md-6`}>

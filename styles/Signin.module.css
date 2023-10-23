@@ -78,7 +78,11 @@ background-color: #5751b3;
     margin-top: 4rem;
 }
 .formbodyy{
-    margin-top: 0rem;
+    height: 95%;
+}
+
+.formbodyyy{
+  height: 100%;
 }
 
 .heroimg{
@@ -229,6 +233,15 @@ background-color: #5751b3;
     .heroimg{
         display: none;
     }  
+
+    .formbodyy{
+    
+      height: 95%;
+  }
+  
+  .formbodyyy{
+    height: 100%;
+  }
 
     .formcontent {
       width: 100%;
