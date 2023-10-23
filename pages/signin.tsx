@@ -23,6 +23,7 @@ export default function Signin() {
     
     <div className={styles.bgimg}>
       <div className={styles.container}>
+      
         <div className={`${styles.formContainer} row`}>
             <div className={`${styles.formbodyy} col-12 col-md-6`}>
             <div className={styles.logosignin}>
